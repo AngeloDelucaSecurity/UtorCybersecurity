@@ -78,7 +78,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/AngeloDelucaSecurity/UtorCybersecurity/blob/main/images/first.PNG
+![first](https://user-images.githubusercontent.com/96212470/146652728-2ff7bdca-2ab4-443d-a624-d51638dfcce8.PNG)
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -105,7 +106,9 @@ curl -o elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/m
 ```
 
 - Update the host file for anisbible to include:
-https://github.com/AngeloDelucaSecurity/UtorCybersecurity/blob/main/images/second.PNG
+
+![second](https://user-images.githubusercontent.com/96212470/146652709-de90337a-e352-4ddf-a345-01aa08167752.PNG)
+
 
 - Run the playbook, with the command ansible-playbook elk.yml
 
