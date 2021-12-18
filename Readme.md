@@ -34,9 +34,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function    | IP Address    | Operating System |
 |----------|-------------|---------------|------------------|
-| Jump Box | Gateway     | 10.0.0.1      | Linux            |
-| Web-1    | Web Server  | 10.0.0.4      | Linux            |
-| Web-2    | Web Server  | 10.0.0.5      | Linux            |
+| Jump Box | Gateway     | 10.0.0.4      | Linux            |
+| Web-1    | Web Server  | 10.0.0.5      | Linux            |
+| Web-2    | Web Server  | 10.0.0.6      | Linux            |
 | ELK      | Elk Server  | 104.43.227.46 | Linux            |
 
 ### Access Policies
@@ -44,28 +44,35 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the ELK machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+99.246.131.0/24 
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by the authorized user who has access to the jump box, access provided by ssh keypair.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+99.246.131.0/24 on port 5601 (firewall rule)
+10.0.0.4 (ssh keys)
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | No                  | 99.246.131.0/24      |
+| Web-1    | No                  | 10.0.0.4             |
+| Web-2    | No                  | 10.0.0.4             |
+| ELK      | Yes                 | 99.246.131.0/24      |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - _TODO: What is the main advantage of automating configuration with Ansible?_
+Creating ansible scripts is highly configureable as you can set whatever is needed to be installed and it makes installing and creating new devices 
+simple and easy. Create a YAML script with the applications specified and lauch them to a new device. Instead of installing each package individually 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install Docker.io
+- Install python-pip3
+- Install Docker Module
+- Download and launch container
+- Enable the service
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -74,12 +81,17 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
+10.0.0.5 Web-1
+10.0.0.6 Web-2
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+Filebeat
+Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat Captures system logs created by Web-1 and Web-2
+- Metricbeat Captures logs from docker by default it captures: container, cpu, diskio, healthcheck, info, memory and network
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
