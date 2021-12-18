@@ -6,10 +6,6 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
-  -[https://github.com/AngeloDelucaSecurity/UtorCybersecurity/blob/main/ansible/filebeat-playbook.yml
-  -[https://github.com/AngeloDelucaSecurity/UtorCybersecurity/blob/main/ansible/metricbeat-playbook.yml
-
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
@@ -65,7 +61,6 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
 Creating ansible scripts is highly configureable as you can set whatever is needed to be installed and it makes installing and creating new devices 
 simple and easy. Create a YAML script with the applications specified and lauch them to a new device. Instead of installing each package individually 
 
