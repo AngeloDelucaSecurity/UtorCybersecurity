@@ -31,7 +31,6 @@ Filebeat monitors the log files or locations that you specify, collects log even
 Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function    | IP Address    | Operating System |
 |----------|-------------|---------------|------------------|
@@ -90,7 +89,6 @@ Filebeat
 Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat Captures system logs created by Web-1 and Web-2
 - Metricbeat Captures logs from docker by default it captures: container, cpu, diskio, healthcheck, info, memory and network
 
