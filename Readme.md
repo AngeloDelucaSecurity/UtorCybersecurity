@@ -47,9 +47,9 @@ Only the ELK machine can accept connections from the Internet. Access to this ma
 99.246.131.0/24 
 
 Machines within the network can only be accessed by the authorized user who has access to the jump box, access provided by ssh keypair.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-99.246.131.0/24 on port 5601 (firewall rule)
-10.0.0.4 (ssh keys)
+
+- 99.246.131.0/24 on port 5601 (firewall rule)
+- 10.0.0.4 (ssh keys)
 
 A summary of the access policies in place can be found in the table below.
 
