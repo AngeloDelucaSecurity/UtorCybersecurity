@@ -106,8 +106,10 @@ curl -o elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/m
 ![second](https://user-images.githubusercontent.com/96212470/146652709-de90337a-e352-4ddf-a345-01aa08167752.PNG)
 
 
-- Run the playbook, with the command ansible-playbook elk.yml
-
+- Run the playbook, with the command:
+```
+ ansible-playbook elk.yml
+```
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - Update the hosts file
