@@ -97,7 +97,13 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 ```
-curl -o elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/main/ansible/elk.yml
+curl -o /etc/ansible/elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/main/ansible/elk.yml
+```
+```
+curl -o /etc/ansible/filebeat-config.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/main/ansible/filebeat-config.yml
+```
+```
+curl -o /etc/ansible/metricbeat-config.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/main/ansible/metricbeat-config.yml
 ```
 
 - Update the host file for anisbible to include:
@@ -109,9 +115,6 @@ curl -o elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/m
 ```
  ansible-playbook elk.yml
 ```
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- Update the hosts file
 - Navigate to 20.124.245.16:5601/app/kibana
 
 
