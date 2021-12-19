@@ -98,7 +98,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 ```
 curl -o elk.yml https://github.com/AngeloDelucaSecurity/UtorCybersecurity/tree/main/ansible/elk.yml
-
 ```
 
 - Update the host file for anisbible to include:
